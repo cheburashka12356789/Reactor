@@ -1,9 +1,22 @@
-function App() {
-  return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
-  )
+function Header() {
+    return (
+        <header>
+            <h3>Result University</h3>
+            <span>Тут будет время  </span>
+        </header>
+    )
 }
 
-export default App
+
+export default function App() {
+    return (
+        <div>
+            <Header />
+            <main>
+                <h1>Hello React</h1>
+            </main>
+        </div>
+    )
+}
+
+
