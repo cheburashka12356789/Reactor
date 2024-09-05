@@ -1,19 +1,32 @@
-function Header() {
-    return (
-        <header>
-            <h3>Result University</h3>
-            <span>Тут будет время  </span>
-        </header>
-    )
-}
+import Header from "./components/Hader.jsx";
+import { ways } from "./data";
+import Button from "./components/Button.jsx";
+import WayToTeach from "./components/WayToTeach.jsx";
 
 
 export default function App() {
     return (
         <div>
-            <Header />
+            <Header/>
             <main>
-                <h1>Hello React</h1>
+                <section>
+                    <h3>Наш подход к обучению</h3>
+                    <ul>
+                        <WayToTeach
+                            title={ways[0].title}
+                            description={ways[0].description}/>
+                        <WayToTeach {...ways[1]}/>
+                        <WayToTeach {...ways[2]}/>
+                        <WayToTeach {...ways[3]}/>
+
+                    </ul>
+                </section>
+                <section>
+                    <h3>
+                        Чем мы отличаемся от других
+                    </h3>
+                    <Button/>
+                </section>
             </main>
         </div>
     )
